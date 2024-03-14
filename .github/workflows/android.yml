@@ -24,3 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Attach files
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-debug.apk
+        path: ./app/build/outputs/apk/debug
